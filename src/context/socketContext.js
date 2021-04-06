@@ -8,7 +8,8 @@ import { ChatContext } from "./chat/ChatContext";
 export const SocketContext = createContext();
 
 export const SocketProvider = ({children}) => {
-    const {socket, online, socketConnect, socketDisconnect} = useSocket('http://localhost:8080');
+    // const {socket, online, socketConnect, socketDisconnect} = useSocket('http://localhost:8080');
+    const {socket, online, socketConnect, socketDisconnect} = useSocket('https://socket-chatreact.herokuapp.com');
     const {auth} = useContext(AuthContext);
     const {dispatch} = useContext(ChatContext);
 
